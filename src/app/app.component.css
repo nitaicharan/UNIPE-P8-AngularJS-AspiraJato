@@ -1,19 +1,11 @@
-#texto {
-    color: green;
+.texto {
+    color: #00e600;
 }
 
-#logo {
+.logo {
     text-align: center;
 
     margin-top: 15%;
     margin-right:center;
     margin-left:center;
-}
-
-#searchfield {
-    height: 20px;
-    width: 30%;
-    border-radius: 10px;
-}
-#box {
 }

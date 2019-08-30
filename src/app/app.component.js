@@ -1,10 +1,11 @@
 'use strict';
 
-angular.module("ajApp").
-  directive('ajApp', [function(){
+angular.module('app',[
+    'trycomponent'
+    ,'trydirective'
+    ,'searchbox'
+]).directive('app', [function(){
     return {    
         restrict: "E",
         templateUrl: "/app/app.component.html",
-    }
-}]);
-
+    }}]);
