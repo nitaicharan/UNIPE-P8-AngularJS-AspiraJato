@@ -3,5 +3,11 @@
 angular.module('ajSearchpage',[])
     .component('ajSearchpage', {
         templateUrl: '/app/searchbox/searchbox.component.html',
-        controller: function(){}
+        controller: ['$scope',function($scope){
+            console.log($scope.search);
+            oninit();
+            function oninit (){
+                $scope.search = '';
+            }
+        }]
 });

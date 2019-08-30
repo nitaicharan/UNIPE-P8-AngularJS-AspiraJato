@@ -1,5 +1,8 @@
-.searchbox-input {
-    height: 20px;
+.search-input {
+    height: 30px;
     width: 30%;
     border-radius: 10px;
+}
+.search-btns {
+    margin: 1%;
 }

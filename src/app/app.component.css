@@ -1,8 +1,9 @@
-.app-texto {
+.app-text {
     color: #00e600;
+    margin: 3%;
 }
 
-.app-central {
+.app-center {
     text-align: center;
 
     margin-top: 15%;

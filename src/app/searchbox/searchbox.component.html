@@ -1,4 +1,10 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/app/searchbox/searchbox.component.css">
 </head>
-<input class="searchbox-input" type="text" placeholder="Pesquisar" value="">
+<div>
+    <input class="search-input" ng-model="search" type="text" placeholder="Pesquisar" value="">
+</div>
+<div class="search-btns">
+    <button type="button" class="btn btn-outline-success">Pesquisar</button>
+    <p>{{search}}</p>
+</div>
