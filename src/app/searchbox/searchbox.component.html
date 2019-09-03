@@ -1,10 +1,17 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/app/searchbox/searchbox.component.css">
 </head>
-<div>
-    <input class="search-input" ng-model="search" type="text" placeholder="Pesquisar" value="">
-</div>
-<div class="search-btns">
-    <button type="button" class="btn btn-outline-success">Pesquisar</button>
-    <p>{{search}}</p>
-</div>
+
+<form ng-submit="spend()" class="search-btns">
+    <input class="search-input" ng-model="search" type="text" placeholder="Pesquisar">
+    <div class="search-btns">
+        <input type="submit" class="btn btn-outline-success" value="Pesquisar"/>
+    </div>
+    <div>
+        <br>
+        <br>
+        <p>Query: {{rs.query}}</p>
+        <p>Intent: {{rs.intents}}</p>
+        <p>Entities: {{rs.entities}}</p>
+    </div>
+</form>
