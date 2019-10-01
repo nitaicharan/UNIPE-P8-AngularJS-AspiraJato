@@ -1,0 +1,19 @@
+{
+  "name": "aspirajato",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitaicharan/UNIPE-P8-AspiraJato.git"
+  },
+  "author": "Nitai Charan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nitaicharan/UNIPE-P8-AspiraJato/issues"
+  },
+  "homepage": "https://github.com/nitaicharan/UNIPE-P8-AspiraJato#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
