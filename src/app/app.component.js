@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('ajApp',[
-    'trycomponent'
-    ,'trydirective'
-    ,'ajSearchpage'
-]).directive('ajApp', [function(){
-    return {    
-        restrict: "E",
-        templateUrl: "/app/app.component.html",
-    }}]);
+        'trycomponent'
+        ,'trydirective'
+        ,'ajRoutes'
+        ,'ajSearchbox'
+    ]
+).component('ajApp', {
+    templateUrl: "/app/app.component.html"
+    ,controller: function(){}
+});

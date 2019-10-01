@@ -1,17 +1,21 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="/app/searchbox/searchbox.component.css">
-</head>
+<div class="search">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/app/searchbox/searchbox.component.css">
+    </head>
 
-<form ng-submit="spend()" class="search-btns">
-    <input class="search-input" ng-model="search" type="text" placeholder="Pesquisar">
-    <div class="search-btns">
-        <input type="submit" class="btn btn-outline-success" value="Pesquisar"/>
-    </div>
-    <div>
+    <form ng-submit="spend()" class="app-center search-btns">
+        <input class="search-input" ng-model="search" type="text" placeholder="Pesquisar">
+        <div class="search-btns">
+            <input type="submit" class="btn btn-outline-success" value="Pesquisar"/>
+        </div>
+    </form>
+    <div ng-hide="!rs" class="search-greentext">
         <br>
         <br>
-        <p>Query: {{rs.query}}</p>
-        <p>Intent: {{rs.intents}}</p>
-        <p>Entities: {{rs.entities}}</p>
+        <h4 style="text-align: center;">Confirmar solicitação</h4>
+        <br>
+        <p>Solicitação: {{rs.query}}</p>
+        <p>Intenção(): {{rs.intents}}</p>
+        <p>Entidades: {{rs.entities}}</p>
     </div>
-</form>
+</div>

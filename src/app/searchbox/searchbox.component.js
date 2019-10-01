@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('ajSearchpage',['resource']).component('ajSearchpage', {
-    templateUrl: '/app/searchbox/searchbox.component.html',
-    controller: ['$scope','resource',function($scope,resource){
+angular.module('ajSearchbox',['resource']).component('ajSearchbox', {
+    templateUrl: '/app/searchbox/searchbox.component.html'
+    ,controller: ['$scope','resource',function($scope,resource){
         var config;
 
         oninit();
@@ -15,6 +15,7 @@ angular.module('ajSearchpage',['resource']).component('ajSearchpage', {
 
         function oninit (){
             config = resource( '/config/luis.json', 'json', 'application/json').get();
+            $scope.search = "Apagar luz cozinha e sala";
         }
     }]
 });
