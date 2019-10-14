@@ -1,0 +1,18 @@
+<div class="feedback">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/app/feedback/feedback.component.css">
+    </head>
+    <div class="feedback-greentext">
+        <br>
+        <br>
+        <h4 style="text-align: center;">Confirmar solicitação</h4>
+        <br>
+        <p>Solicitação: {{searchresult.query}}</p>
+        <p ng-repeat="intent in searchresult.intents" ng-if="intent.intent.toLowerCase() != 'none'">Intenção: {{intent.intent}}</p>
+        <p ng-repeat="entity in searchresult.entities">Entidades: {{entity.entity}}</p>
+    </div>
+
+    <div style="text-align: center">
+        <button ng-click="goGet()"  class="btn btn-outline-success" type="button">Confirmar</button>
+    </div>
+</div>

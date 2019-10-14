@@ -5,6 +5,7 @@ angular.module('ajApp',[
         ,'trydirective'
         ,'ajRoutes'
         ,'ajSearchbox'
+        ,'ajFeedback'
     ]
 ).component('ajApp', {
     templateUrl: "/app/app.component.html"

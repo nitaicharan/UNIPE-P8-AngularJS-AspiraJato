@@ -3,19 +3,10 @@
         <link rel="stylesheet" type="text/css" href="/app/searchbox/searchbox.component.css">
     </head>
 
-    <form ng-submit="spend()" class="app-center search-btns">
+    <form ng-submit="goSearch()" class="app-center search-btns">
         <input class="search-input" ng-model="search" type="text" placeholder="Pesquisar">
         <div class="search-btns">
             <input type="submit" class="btn btn-outline-success" value="Pesquisar"/>
         </div>
     </form>
-    <div ng-hide="!rs" class="search-greentext">
-        <br>
-        <br>
-        <h4 style="text-align: center;">Confirmar solicitação</h4>
-        <br>
-        <p>Solicitação: {{rs.query}}</p>
-        <p>Intenção(): {{rs.intents}}</p>
-        <p>Entidades: {{rs.entities}}</p>
-    </div>
 </div>

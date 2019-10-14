@@ -1,21 +1,20 @@
 'use strict';
 
-angular.module('ajSearchbox',['resource']).component('ajSearchbox', {
+angular.module('ajSearchbox',[]).component('ajSearchbox', {
     templateUrl: '/app/searchbox/searchbox.component.html'
-    ,controller: ['$scope','resource',function($scope,resource){
+    ,controller: ['$scope','$location',function($scope,$location){
         var config;
 
         oninit();
 
-        $scope.spend = function (){
+        $scope.goSearch = function (){
             if($scope.search){
-                $scope.rs = resource( config.url+$scope.search, 'json', 'application/json').get();
+                $location.path('feedback').search('query',$scope.search);
             }
         }
 
         function oninit (){
-            config = resource( '/config/luis.json', 'json', 'application/json').get();
-            $scope.search = "Apagar luz cozinha e sala";
+            $scope.search = "Kim Patroca Kataguiri 2019";
         }
     }]
 });
