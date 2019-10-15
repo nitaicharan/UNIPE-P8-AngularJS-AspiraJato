@@ -2,23 +2,21 @@
 
 angular.module('ajFeedback',['resource']).component('ajFeedback', {
     templateUrl: '/app/feedback/feedback.component.html'
-    ,controller: ['$scope','$location','resource',function($scope,$location,resource){
-        var luis; 
+    ,controller: ['$scope','$location','$window','resource',function($scope,$location,$window,resource){
+        var config = resource('/config/luis.json','json','application/json').get().$get();
+        var query = $location.search().query;
 
         onInit();
 
-        $scope.goGet = function(){
-            //console.log($scope.searchresult);
+        $scope.show = ()=>{
+            if(query)$location.path('show').search('query',query);
         }
-        
+
         function onInit(){
-            var query = $location.search().query; 
-            var luissets = resource('/config/luis.json','json','application/json').get().$get();
-            var elasticsets = resource('/config/elastic.json','json','application/json').get().$get();
-            luissets.then(luis=>{
+            config.then(luis=>{
                 if(query){
                     $scope.searchresult = resource(luis.url+query, 'json', 'application/json').get();
-                    //console.log($scope.searchresult);
+                    console.log($scope.searchresult);
                 }
             });
         }

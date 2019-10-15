@@ -1,0 +1,21 @@
+<div class="show">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/app/show/show.component.css">
+    </head>
+    <div class="show-greentext">
+        <br>
+        <h4 style="text-align: center;">Resultado(s)</h4>
+        <br>
+        <div ng-repeat="result in results">
+            <p>Nome parlamentar: {{result._source.nomeParlamentar}}<br>
+            Mês: {{result._source.mes}}<br>
+            Ano: {{result._source.ano}}<br>
+            Descrição: {{result._source.descricao}}<br>
+            Fornecedor: {{result._source.fornecedor}}<br>
+            Valor documento: {{result._source.valorDocumento}}<br>
+            Valor glosa: {{result._source.valorGlosa}}<br>
+            Valor liquido: {{result._source.valorLiquido}}<br>
+            <br>
+        </div>
+    </div>
+</div>

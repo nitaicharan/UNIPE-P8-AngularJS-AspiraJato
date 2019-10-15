@@ -6,6 +6,7 @@ angular.module('ajApp',[
         ,'ajRoutes'
         ,'ajSearchbox'
         ,'ajFeedback'
+        ,'ajShow'
     ]
 ).component('ajApp', {
     templateUrl: "/app/app.component.html"
