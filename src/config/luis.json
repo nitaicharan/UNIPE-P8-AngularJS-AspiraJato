@@ -1,3 +1,3 @@
 {
-    "url": "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/6f9471b6-19a9-4a2a-b768-878f1d4a735f?verbose=true&timezoneOffset=0&subscription-key=7d729527d57c4ea39c3ec8a5ef3c7b48&q="
+    "url": "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/f504cca3-98fe-4854-95ff-3af3964d045a?staging=true&verbose=true&timezoneOffset=-180&subscription-key=7d729527d57c4ea39c3ec8a5ef3c7b48&q="
 }
