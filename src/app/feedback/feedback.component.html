@@ -8,7 +8,7 @@
         <h4 style="text-align: center;">Confirmar solicitação</h4>
         <br>
         <p>Solicitação: {{searchresult.query}}</p>
-        <p ng-repeat="intent in searchresult.intents" ng-if="intent.intent.toLowerCase() != 'none'">Intenção: {{intent.intent}}</p>
+        <p ng-if="intent.intent.toLowerCase() != 'none'">Intenção: {{searchresult.topScoringIntent.intent}}</p>
         <p ng-repeat="entity in searchresult.entities">Entidades: {{entity.entity}}</p>
     </div>
 
