@@ -3,8 +3,12 @@
         <link rel="stylesheet" type="text/css" href="/app/show/show.component.css">
     </head>
     <div class="show-greentext">
+        <div>
+            <h4 style="text-align: center;">Resultado(s)</h4>
+            <p style="text-align: center;">Deseja realizar uma nova busca?</p>
+            <button style="display: block; margin: auto" type="button" class="btn btn-outline-success">Refazer Busca</button>
+        </div>
         <br>
-        <h4 style="text-align: center;">Resultado(s)</h4>
         <br>
         <div ng-repeat="result in results">
             <p>Nome parlamentar: {{result._source.nomeParlamentar}}<br>

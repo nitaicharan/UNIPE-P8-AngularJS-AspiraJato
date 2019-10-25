@@ -16,7 +16,6 @@ angular.module('ajFeedback',['resource']).component('ajFeedback', {
             config.then(luis=>{
                 if(query){
                     $scope.searchresult = resource(luis.url+query, 'json', 'application/json').get();
-                    console.log($scope.searchresult);
                 }
             });
         }
