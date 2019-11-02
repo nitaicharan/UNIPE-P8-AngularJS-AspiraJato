@@ -8,6 +8,10 @@ angular.module('ajShow',['resource']).component('ajShow', {
 
         onInit();
 
+        $scope.newSearch = function(){
+            $location.path('').search('query', '');
+        }
+
         function onInit(){
             config.then(luis=>{
                 if(query){
