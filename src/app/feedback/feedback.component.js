@@ -12,6 +12,10 @@ angular.module('ajFeedback',['resource']).component('ajFeedback', {
             if(query)$location.path('show').search('query',query);
         }
 
+        $scope.redo = function(){
+            if(query)$location.path('').search('query',query);
+        }
+
         function onInit(){
             config.then(luis=>{
                 if(query){

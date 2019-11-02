@@ -4,6 +4,7 @@ angular.module('ajSearch',[]).component('ajSearch', {
     templateUrl: '/app/search/search.component.html'
     ,controller: ['$scope','$location',function($scope,$location){
         var config;
+        $scope.search = $location.search().query;
 
         oninit();
 
@@ -18,7 +19,7 @@ angular.module('ajSearch',[]).component('ajSearch', {
         }
 
         function oninit (){
-            $scope.search = "Kim Patroca Kataguiri 2019";
+            if(!$scope.search)$scope.search = "Kim Patroca Kataguiri 2019";
         }
     }]
 });
