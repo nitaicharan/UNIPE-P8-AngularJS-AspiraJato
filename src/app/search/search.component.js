@@ -16,6 +16,7 @@ angular.module('ajSearch',[]).component('ajSearch', {
 
         $scope.clear = function(){
             $scope.search = '';
+            $location.path('').search('query',$scope.search);
         }
 
         function oninit (){
