@@ -4,7 +4,7 @@ angular.module('ajApp',[
         'trycomponent'
         ,'trydirective'
         ,'ajRoutes'
-        ,'ajSearchbox'
+        ,'ajSearch'
         ,'ajFeedback'
         ,'ajShow'
     ]

@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('ajSearchbox',[]).component('ajSearchbox', {
-    templateUrl: '/app/searchbox/searchbox.component.html'
+angular.module('ajSearch',[]).component('ajSearch', {
+    templateUrl: '/app/search/search.component.html'
     ,controller: ['$scope','$location',function($scope,$location){
         var config;
 
