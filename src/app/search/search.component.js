@@ -13,6 +13,10 @@ angular.module('ajSearch',[]).component('ajSearch', {
             }
         }
 
+        $scope.clear = function(){
+            $scope.search = '';
+        }
+
         function oninit (){
             $scope.search = "Kim Patroca Kataguiri 2019";
         }
