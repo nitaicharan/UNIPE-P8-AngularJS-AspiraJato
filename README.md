@@ -11,7 +11,7 @@ Idealizadores:
 - [Fábio Falcão](https://www.linkedin.com/in/f%C3%A1bio-falc%C3%A3o-6994a616/)
 
 ## Aspira Jato
-![app](https://github.com/nitaicharan/UNIPE-P8-AngularJS-AspiraJato/blob/dev/app.png?raw=true)
+![app](https://github.com/nitaicharan/UNIPE-P8-AngularJS-AspiraJato/blob/dev/app.jpg?raw=true)
 
 ## Justificativa
 A partir da promulgação da Lei de Acesso à Informação, Lei n o 12.527/2011, foi garantido o direito constitucional de acesso às informações públicas, possibilitando que qualquer pessoa física ou jurídica, sem a necessidade de apresentar motivos, receba informações públicas de órgãos e entidades. Desta forma, surgem novos mecanismos os quais possibilitam a participação do cidadão na fiscalização de gastos públicos e combate à corrupção.
