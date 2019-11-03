@@ -9,7 +9,22 @@ angular.module('ajFeedback',['resource']).component('ajFeedback', {
         onInit();
 
         $scope.show = ()=>{
-            if(query)$location.path('show').search('query',query);
+            if(query){
+                var params = {};
+                $scope.searchresult.entities.forEach(entity =>{
+                    if(entity.type.toLowerCase().includes('datetimev2')){
+                        entity.resolution.values.forEach(time =>{
+                            params.end = time.end;
+                            params.start = time.start;
+                        })
+                    }else if(entity.type.toLowerCase().includes('deputadx')){
+                        entity.resolution.values.forEach(entity =>{
+                            params.nome = entity;
+                        })
+                    }
+                });
+                $location.path('show').search(params);
+            }
         }
 
         $scope.redo = function(){

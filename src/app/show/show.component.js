@@ -4,7 +4,7 @@ angular.module('ajShow',['resource']).component('ajShow', {
     templateUrl: '/app/show/show.component.html'
     ,controller: ['$scope','$location','$window','resource',function($scope,$location,$window,resource){
         var config = resource('/config/elastic.json','json','application/json').get().$get();
-        var query = $location.search().query;
+        var params = $location.search();
 
         onInit();
 
@@ -13,14 +13,37 @@ angular.module('ajShow',['resource']).component('ajShow', {
         }
 
         function onInit(){
-            config.then(luis=>{
-                if(query){
-                    resource('http://'+luis.url+query, 'json', 'application/json').get().$get().then(response =>{
-                        $scope.results = response.hits.hits
-                        console.log($scope.results);
+            if(params){
+                var body = before(params);
+                config.then(elastic=>{
+                    var response = resource('http://'+elastic.url, 'json', 'application/json').save(body).$promise
+                    .then(response =>{
+                        $scope.gastos = response.hits.hits;
+                        $scope.total = response.hits.total.value;
+                    }).catch(response =>{
+                        console.log(response);
                     });
+                });
+            }
+        }
+
+        function before(params){
+            return {
+                "query": {"bool": {"must": [{
+                    "match": {
+                        "nomeParlamentar": params.nome
+                    }
+                }, {
+                    "range": {
+                        "dataEmissao": {
+                            "gte": params.start
+                            ,"lt": params.end
+                            ,"format" : "yyyy-MM-dd"
+                        }
+                    }
                 }
-            });
+                ]}}
+            };
         }
     }]
 });
