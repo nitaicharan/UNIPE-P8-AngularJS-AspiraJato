@@ -29,6 +29,7 @@ angular.module('ajShow',['resource']).component('ajShow', {
 
         function before(params){
             return {
+                "size": 10000,
                 "query": {"bool": {"must": [{
                     "match": {
                         "nomeParlamentar": params.nome
