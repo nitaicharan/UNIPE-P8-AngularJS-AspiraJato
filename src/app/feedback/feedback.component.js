@@ -28,7 +28,7 @@ angular.module('ajFeedback',['resource']).component('ajFeedback', {
         }
 
         $scope.redo = function(){
-            if(query)$location.path('').search('');
+            if(query)$location.path('').search("query", query);
         }
 
         function onInit(){
