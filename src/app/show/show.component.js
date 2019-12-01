@@ -32,7 +32,10 @@ angular.module('ajShow',['resource']).component('ajShow', {
                 "size": 10000,
                 "query": {"bool": {"must": [{
                     "match": {
-                        "nomeParlamentar": params.nome
+                        "idDeputado": {
+                            "query":params.nome
+                            ,"minimum_should_match": "100%"
+                        }
                     }
                 }, {
                     "range": {

@@ -20,7 +20,7 @@ angular.module('ajSearch',[]).component('ajSearch', {
         }
 
         function oninit (){
-            if(!$scope.search)$scope.search = "Kim Patroca Kataguiri 2019";
+            //if(!$scope.search)$scope.search = "Kim Patroca Kataguiri 2019";
         }
     }]
 });
