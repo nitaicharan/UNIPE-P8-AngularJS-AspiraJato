@@ -18,8 +18,8 @@ angular.module('ajFeedback',['resource']).component('ajFeedback', {
                             params.start = time.start;
                         })
                     }else if(entity.type.toLowerCase().includes('deputadx')){
-                        entity.resolution.values.forEach(entity =>{
-                            params.nome = entity;
+                        entity.resolution.values.forEach(id =>{
+                            params.id = id.replace('dep-', '');
                         })
                     }
                 });

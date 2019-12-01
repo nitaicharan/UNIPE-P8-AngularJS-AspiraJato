@@ -33,7 +33,7 @@ angular.module('ajShow',['resource']).component('ajShow', {
                 "query": {"bool": {"must": [{
                     "match": {
                         "idDeputado": {
-                            "query":params.nome
+                            "query":params.id
                             ,"minimum_should_match": "100%"
                         }
                     }
